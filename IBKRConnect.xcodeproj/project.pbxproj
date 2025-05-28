@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		90839B862DE7016D004888D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90839B6F2DE7016D004888D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90839B762DE7016D004888D1;
+			remoteInfo = IBKRConnect;
+		};
+		90839B902DE7016D004888D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90839B6F2DE7016D004888D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90839B762DE7016D004888D1;
+			remoteInfo = IBKRConnect;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		90839B772DE7016D004888D1 /* IBKRConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBKRConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90839B852DE7016D004888D1 /* IBKRConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IBKRConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90839B8F2DE7016D004888D1 /* IBKRConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IBKRConnectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		90839B792DE7016D004888D1 /* IBKRConnect */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = IBKRConnect;
+			sourceTree = "<group>";
+		};
+		90839B882DE7016D004888D1 /* IBKRConnectTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = IBKRConnectTests;
+			sourceTree = "<group>";
+		};
+		90839B922DE7016D004888D1 /* IBKRConnectUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = IBKRConnectUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90839B742DE7016D004888D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90839B822DE7016D004888D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90839B8C2DE7016D004888D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90839B6E2DE7016D004888D1 = {
+			isa = PBXGroup;
+			children = (
+				90839B792DE7016D004888D1 /* IBKRConnect */,
+				90839B882DE7016D004888D1 /* IBKRConnectTests */,
+				90839B922DE7016D004888D1 /* IBKRConnectUITests */,
+				90839B782DE7016D004888D1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		90839B782DE7016D004888D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90839B772DE7016D004888D1 /* IBKRConnect.app */,
+				90839B852DE7016D004888D1 /* IBKRConnectTests.xctest */,
+				90839B8F2DE7016D004888D1 /* IBKRConnectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90839B762DE7016D004888D1 /* IBKRConnect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90839B992DE7016D004888D1 /* Build configuration list for PBXNativeTarget "IBKRConnect" */;
+			buildPhases = (
+				90839B732DE7016D004888D1 /* Sources */,
+				90839B742DE7016D004888D1 /* Frameworks */,
+				90839B752DE7016D004888D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				90839B792DE7016D004888D1 /* IBKRConnect */,
+			);
+			name = IBKRConnect;
+			packageProductDependencies = (
+			);
+			productName = IBKRConnect;
+			productReference = 90839B772DE7016D004888D1 /* IBKRConnect.app */;
+			productType = "com.apple.product-type.application";
+		};
+		90839B842DE7016D004888D1 /* IBKRConnectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90839B9C2DE7016D004888D1 /* Build configuration list for PBXNativeTarget "IBKRConnectTests" */;
+			buildPhases = (
+				90839B812DE7016D004888D1 /* Sources */,
+				90839B822DE7016D004888D1 /* Frameworks */,
+				90839B832DE7016D004888D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90839B872DE7016D004888D1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				90839B882DE7016D004888D1 /* IBKRConnectTests */,
+			);
+			name = IBKRConnectTests;
+			packageProductDependencies = (
+			);
+			productName = IBKRConnectTests;
+			productReference = 90839B852DE7016D004888D1 /* IBKRConnectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		90839B8E2DE7016D004888D1 /* IBKRConnectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90839B9F2DE7016D004888D1 /* Build configuration list for PBXNativeTarget "IBKRConnectUITests" */;
+			buildPhases = (
+				90839B8B2DE7016D004888D1 /* Sources */,
+				90839B8C2DE7016D004888D1 /* Frameworks */,
+				90839B8D2DE7016D004888D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90839B912DE7016D004888D1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				90839B922DE7016D004888D1 /* IBKRConnectUITests */,
+			);
+			name = IBKRConnectUITests;
+			packageProductDependencies = (
+			);
+			productName = IBKRConnectUITests;
+			productReference = 90839B8F2DE7016D004888D1 /* IBKRConnectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90839B6F2DE7016D004888D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					90839B762DE7016D004888D1 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					90839B842DE7016D004888D1 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 90839B762DE7016D004888D1;
+					};
+					90839B8E2DE7016D004888D1 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 90839B762DE7016D004888D1;
+					};
+				};
+			};
+			buildConfigurationList = 90839B722DE7016D004888D1 /* Build configuration list for PBXProject "IBKRConnect" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 90839B6E2DE7016D004888D1;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 90839B782DE7016D004888D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90839B762DE7016D004888D1 /* IBKRConnect */,
+				90839B842DE7016D004888D1 /* IBKRConnectTests */,
+				90839B8E2DE7016D004888D1 /* IBKRConnectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90839B752DE7016D004888D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90839B832DE7016D004888D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90839B8D2DE7016D004888D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90839B732DE7016D004888D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90839B812DE7016D004888D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90839B8B2DE7016D004888D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		90839B872DE7016D004888D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90839B762DE7016D004888D1 /* IBKRConnect */;
+			targetProxy = 90839B862DE7016D004888D1 /* PBXContainerItemProxy */;
+		};
+		90839B912DE7016D004888D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90839B762DE7016D004888D1 /* IBKRConnect */;
+			targetProxy = 90839B902DE7016D004888D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		90839B972DE7016D004888D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		90839B982DE7016D004888D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		90839B9A2DE7016D004888D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IBKRConnect/IBKRConnect.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com..IBKRConnect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		90839B9B2DE7016D004888D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IBKRConnect/IBKRConnect.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com..IBKRConnect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		90839B9D2DE7016D004888D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com..IBKRConnectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IBKRConnect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/IBKRConnect";
+			};
+			name = Debug;
+		};
+		90839B9E2DE7016D004888D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com..IBKRConnectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IBKRConnect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/IBKRConnect";
+			};
+			name = Release;
+		};
+		90839BA02DE7016D004888D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com..IBKRConnectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = IBKRConnect;
+			};
+			name = Debug;
+		};
+		90839BA12DE7016D004888D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com..IBKRConnectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = IBKRConnect;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90839B722DE7016D004888D1 /* Build configuration list for PBXProject "IBKRConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90839B972DE7016D004888D1 /* Debug */,
+				90839B982DE7016D004888D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90839B992DE7016D004888D1 /* Build configuration list for PBXNativeTarget "IBKRConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90839B9A2DE7016D004888D1 /* Debug */,
+				90839B9B2DE7016D004888D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90839B9C2DE7016D004888D1 /* Build configuration list for PBXNativeTarget "IBKRConnectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90839B9D2DE7016D004888D1 /* Debug */,
+				90839B9E2DE7016D004888D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90839B9F2DE7016D004888D1 /* Build configuration list for PBXNativeTarget "IBKRConnectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90839BA02DE7016D004888D1 /* Debug */,
+				90839BA12DE7016D004888D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90839B6F2DE7016D004888D1 /* Project object */;
+}
