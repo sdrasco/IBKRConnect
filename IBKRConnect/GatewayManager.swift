@@ -11,15 +11,15 @@ class GatewayManager: ObservableObject {
     private var process: Process?
     private var gatewayURL: URL?
     private let serviceName = "IBKRConnect"
+    
+    @Published var hasCredentials: Bool {
+        storedCredentials() != nil
+    }
 
     init() {
         if let path = UserDefaults.standard.string(forKey: "gatewayPath") {
             gatewayURL = URL(fileURLWithPath: path)
         }
-    }
-
-    var hasCredentials: Bool {
-        storedCredentials() != nil
     }
 
     func promptForGateway() {
@@ -96,4 +96,3 @@ class GatewayManager: ObservableObject {
         isConnected = false
     }
 }
-

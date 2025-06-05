@@ -9,6 +9,7 @@ struct ContentView: View {
             Circle()
                 .fill(manager.isConnected ? Color.green : Color.red)
                 .frame(width: 12, height: 12)
+
             Button(manager.isConnected ? "Disconnect" : "Connect") {
                 if manager.isConnected {
                     manager.disconnect()
@@ -36,4 +37,3 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
-
