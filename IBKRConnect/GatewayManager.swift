@@ -12,11 +12,26 @@ class GatewayManager: ObservableObject {
     @Published private(set) var hasCredentials = false
     private var process: Process?
     private var gatewayURL: URL?
+    private var gatewayBookmark: Data?
     private let serviceName = "IBKRConnect"
     
     init() {
-        if let path = UserDefaults.standard.string(forKey: "gatewayPath") {
-            gatewayURL = URL(fileURLWithPath: path)
+        if let data = UserDefaults.standard.data(forKey: "gatewayBookmark") {
+            var isStale = false
+            if let url = try? URL(resolvingBookmarkData: data,
+                                  options: [.withSecurityScope],
+                                  bookmarkDataIsStale: &isStale) {
+                gatewayURL = url
+                gatewayBookmark = data
+                if isStale {
+                    saveBookmark(for: url)
+                }
+            }
+        } else if let path = UserDefaults.standard.string(forKey: "gatewayPath") {
+            let url = URL(fileURLWithPath: path)
+            gatewayURL = url
+            saveBookmark(for: url)
+            UserDefaults.standard.removeObject(forKey: "gatewayPath")
         }
         hasCredentials = storedCredentials() != nil
     }
@@ -29,11 +44,23 @@ class GatewayManager: ObservableObject {
         panel.allowsMultipleSelection = false
         if panel.runModal() == .OK, let url = panel.url {
             gatewayURL = url
-            UserDefaults.standard.set(url.path, forKey: "gatewayPath")
+            saveBookmark(for: url)
         } else {
             if let helpURL = URL(string: "https://www.interactivebrokers.com/campus/ibkr-api-page/cpapi-v1/#gw-step-one") {
                 NSWorkspace.shared.open(helpURL)
             }
+        }
+    }
+
+    private func saveBookmark(for url: URL) {
+        do {
+            let data = try url.bookmarkData(options: .withSecurityScope,
+                                           includingResourceValuesForKeys: nil,
+                                           relativeTo: nil)
+            gatewayBookmark = data
+            UserDefaults.standard.set(data, forKey: "gatewayBookmark")
+        } catch {
+            print("Failed to save bookmark: \(error)")
         }
     }
 
@@ -76,6 +103,7 @@ class GatewayManager: ObservableObject {
             promptForGateway()
             return
         }
+        let access = url.startAccessingSecurityScopedResource()
         let process = Process()
         process.executableURL = url
         if let creds = storedCredentials() {
@@ -87,6 +115,13 @@ class GatewayManager: ObservableObject {
             self.isConnected = true
         } catch {
             print("Failed to launch gateway: \(error)")
+            if access { url.stopAccessingSecurityScopedResource() }
+            return
+        }
+        if access {
+            process.terminationHandler = { _ in
+                url.stopAccessingSecurityScopedResource()
+            }
         }
     }
 
@@ -94,5 +129,8 @@ class GatewayManager: ObservableObject {
         process?.terminate()
         process = nil
         isConnected = false
+        if let url = gatewayURL {
+            url.stopAccessingSecurityScopedResource()
+        }
     }
 }
