@@ -1,5 +1,6 @@
 import Foundation
 import Security
+import AppKit
 
 struct Credentials {
     var username: String
@@ -8,18 +9,16 @@ struct Credentials {
 
 class GatewayManager: ObservableObject {
     @Published var isConnected = false
+    @Published private(set) var hasCredentials = false
     private var process: Process?
     private var gatewayURL: URL?
     private let serviceName = "IBKRConnect"
     
-    @Published var hasCredentials: Bool {
-        storedCredentials() != nil
-    }
-
     init() {
         if let path = UserDefaults.standard.string(forKey: "gatewayPath") {
             gatewayURL = URL(fileURLWithPath: path)
         }
+        hasCredentials = storedCredentials() != nil
     }
 
     func promptForGateway() {
@@ -68,6 +67,7 @@ class GatewayManager: ObservableObject {
         ]
         SecItemDelete(query as CFDictionary)
         SecItemAdd(query as CFDictionary, nil)
+        hasCredentials = true
     }
 
     func connect() {
