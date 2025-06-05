@@ -68,3 +68,9 @@ fastlane/test_output
 ###############################################################################
 # .idea/               # JetBrains AppCode
 # .vscode/             # Visual Studio Code workspace settings
+
+###############################################################################
+# Ignore all contents of clientportal/, but keep the directory itself
+###############################################################################
+/clientportal/*
+!/clientportal/.gitkeep
