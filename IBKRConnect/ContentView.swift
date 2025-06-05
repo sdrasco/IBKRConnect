@@ -5,7 +5,7 @@ struct ContentView: View {
     @State private var showingCredentials = false
 
     var body: some View {
-        VStack(spacing: 16) {
+        HStack(spacing: 12) {
             Circle()
                 .fill(manager.isConnected ? Color.green : Color.red)
                 .frame(width: 12, height: 12)
@@ -24,7 +24,7 @@ struct ContentView: View {
             .frame(width: 120)
         }
         .padding()
-        .frame(minWidth: 200, minHeight: 120)
+        .frame(minWidth: 150, minHeight: 60)
         .sheet(isPresented: $showingCredentials) {
             CredentialsSheet { creds in
                 manager.saveCredentials(creds)
