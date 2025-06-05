@@ -13,7 +13,7 @@ class GatewayManager: ObservableObject {
     private var process: Process?
     private var gatewayURL: URL?
     private let serviceName = "IBKRConnect"
-
+    
     init() {
         if let path = UserDefaults.standard.string(forKey: "gatewayPath") {
             gatewayURL = URL(fileURLWithPath: path)
@@ -96,4 +96,3 @@ class GatewayManager: ObservableObject {
         isConnected = false
     }
 }
-
