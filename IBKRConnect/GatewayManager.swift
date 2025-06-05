@@ -10,7 +10,11 @@ class GatewayManager: ObservableObject {
     @Published var isConnected = false
     private var process: Process?
     private var gatewayURL: URL?
-    private let credentialsAccount = "IBKRGatewayUser"
+    private let serviceName = "IBKRConnect"
+    
+    @Published var hasCredentials: Bool {
+        storedCredentials() != nil
+    }
 
     init() {
         if let path = UserDefaults.standard.string(forKey: "gatewayPath") {
@@ -27,16 +31,20 @@ class GatewayManager: ObservableObject {
         if panel.runModal() == .OK, let url = panel.url {
             gatewayURL = url
             UserDefaults.standard.set(url.path, forKey: "gatewayPath")
+        } else {
+            if let helpURL = URL(string: "https://www.interactivebrokers.com/campus/ibkr-api-page/cpapi-v1/#gw-step-one") {
+                NSWorkspace.shared.open(helpURL)
+            }
         }
     }
 
     func storedCredentials() -> Credentials? {
-        var query: [String: Any] = [
+        let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
-            kSecAttrService as String: "IBKRConnect",
-            kSecAttrAccount as String: credentialsAccount,
+            kSecAttrService as String: serviceName,
             kSecReturnAttributes as String: true,
-            kSecReturnData as String: true
+            kSecReturnData as String: true,
+            kSecMatchLimit as String: kSecMatchLimitOne
         ]
         var item: CFTypeRef?
         let status = SecItemCopyMatching(query as CFDictionary, &item)
@@ -54,7 +62,7 @@ class GatewayManager: ObservableObject {
         let passwordData = creds.password.data(using: .utf8)!
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
-            kSecAttrService as String: "IBKRConnect",
+            kSecAttrService as String: serviceName,
             kSecAttrAccount as String: creds.username,
             kSecValueData as String: passwordData
         ]
@@ -88,4 +96,3 @@ class GatewayManager: ObservableObject {
         isConnected = false
     }
 }
-
