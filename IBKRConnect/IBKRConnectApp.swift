@@ -13,5 +13,6 @@ struct IBKRConnectApp: App {
         WindowGroup {
             ContentView()
         }
+        .defaultSize(width: 180, height: 80)
     }
 }
