@@ -1,6 +1,7 @@
 import Foundation
 import Security
 import AppKit
+import UniformTypeIdentifiers
 
 struct Credentials {
     var username: String
@@ -42,9 +43,18 @@ class GatewayManager: ObservableObject {
         panel.canChooseFiles = true
         panel.canChooseDirectories = false
         panel.allowsMultipleSelection = false
+        if #available(macOS 11.0, *) {
+            if let shellType = UTType(filenameExtension: "sh") {
+                panel.allowedContentTypes = [shellType]
+            }
+        }
         if panel.runModal() == .OK, let url = panel.url {
-            gatewayURL = url
-            saveBookmark(for: url)
+            if FileManager.default.fileExists(atPath: url.path) {
+                gatewayURL = url
+                saveBookmark(for: url)
+            } else {
+                print("Selected file does not exist: \(url.path)")
+            }
         } else {
             if let helpURL = URL(string: "https://www.interactivebrokers.com/campus/ibkr-api-page/cpapi-v1/#gw-step-one") {
                 NSWorkspace.shared.open(helpURL)
@@ -104,6 +114,12 @@ class GatewayManager: ObservableObject {
             return
         }
         let access = url.startAccessingSecurityScopedResource()
+        guard FileManager.default.isExecutableFile(atPath: url.path) else {
+            print("Gateway executable not found at \(url.path)")
+            if access { url.stopAccessingSecurityScopedResource() }
+            promptForGateway()
+            return
+        }
         let process = Process()
         process.executableURL = url
         if let creds = storedCredentials() {
